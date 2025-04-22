@@ -1,0 +1,259 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+  padding: 40px 20px;
+  line-height: 1.7;
+}
+
+/* Navigation Tabs */
+.profile {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.hider {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  text-align: center;
+  font-size: 40px;
+  color: #0ea5e9; /* Choose a color that fits your design */
+  margin-top: 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.tabs {
+  text-decoration: none;
+  background-color: #0ea5e9;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tabs:hover {
+  background: #38bdf8;
+  transform: scale(1.05);
+}
+
+/* Header Styles */
+.name {
+  color: #38bdf8;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 34px;
+  margin: 60px 0 20px;
+  color: #e2e8f0;
+}
+
+/* Paragraph */
+p {
+  max-width: 750px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  font-size: 18px;
+  color: #cbd5e1;
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul li {
+  background: #1e293b;
+  margin: 12px 0;
+  padding: 15px 20px;
+  border-left: 5px solid #0ea5e9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+ul li:hover {
+  transform: translateX(5px);
+}
+
+h2, h3 {
+  margin-bottom: 5px;
+}
+
+/* Optional: Add smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+.certificates {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px auto;
+}
+
+.certs {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #0ea5e9;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certs:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
+}
+
+.typewriter-box {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.typewriter {
+  font-family: monospace;
+  font-size: 18px;
+  color: #f1f5f9;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0;
+  opacity: 1;
+  margin: 5px 0; /* minimal spacing per line */
+}
+
+/* Each line with delay */
+.line1 {
+  animation: typing 2.5s steps(40, end) 0s forwards;
+}
+.line2 {
+  animation: typing 3s steps(60, end) 2.5s forwards;
+}
+.line3 {
+  animation: typing 3s steps(50, end) 5.5s forwards;
+}
+.line4 {
+  animation: typing 3s steps(50, end) 8.5s forwards;
+}
+
+/* Keyframes */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.conts {
+  font-size: 20px;
+  color: #f1f5f9;
+  font-weight: 500;
+  margin: 10px 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* Style for the link inside */
+.conts a {
+  text-decoration: none;
+  color: #0ea5e9;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.conts a:hover {
+  color: #38bdf8;
+  transform: scale(1.05);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .tabs {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .typewriter-box {
+    padding: 0 10px;
+  }
+
+  .typewriter {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .certificates {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certs {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .tabs {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .typewriter {
+    font-size: 14px;
+  }
+
+  h1, .name {
+    font-size: 20px;
+  }
+}
